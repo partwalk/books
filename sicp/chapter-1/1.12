@@ -1,0 +1,6 @@
+#lang sicp
+
+(define (pascal n r)
+  (cond [(= 0 r) 1]
+        [(= n r) 1]
+        [else (+ (pascal (- n 1) (- r 1)) (pascal (- n 1) r))]))
