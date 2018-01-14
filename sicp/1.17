@@ -1,9 +1,0 @@
-#lang sicp
-
-(define (double x) (* 2 x))
-(define (halve x) (/ x 2))
-
-(define (mult a b)
-  (cond [(= a 0) 0]
-        [(even? a) (double (mult (halve a) b))]
-        [else (+ b (mult (- a 1) b))]))
